@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可拉伸div</title>
+    <style>
+
+        .container2{
+            height: 400px;
+            font-size: 0;
+        }
+
+        .table2{
+            display: inline-block;
+            width: 300px;
+            height: 100%;
+            background-color: cadetblue;
+            overflow: scroll;
+            font-size: 16px;
+            vertical-align: middle
+        }
+        .strech2{
+            display: inline-block;
+            width: 300px;
+            height: 100%;
+            background-color: bisque;
+            overflow: scroll;
+            font-size: 16px;
+            vertical-align: middle
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <h4>X轴方向拉伸</h4>
+        <div class="container2">
+            <div class="table2">
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+                我是小可爱
+            </div>
+            <div class="resizerHandle" style="background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAADAQMAAABCowZuAAAABlBMVEUAAACkvtSA7tmIAAAAAXRSTlMAQObYZgAAAA9JREFUCB1jXMUABoxAGgAJaAFXPIkJqAAAAABJRU5ErkJggg==) no-repeat center center; backgroundColor: white;vertical-align: middle">
+                <div style="position: relative; height: 100%; width: 100%; border: 1px dotted #ebebeb" ></div>
+            </div>
+            <div id="stretchDialog" class="strech2">
+                我是小可爱的爸爸
+            </div>
+        </div>
+    </div>
+    <script src='./resizable.js'></script>
+    <script>
+
+        const ele2 = document.getElementsByClassName("resizerHandle")[0];
+        resizableDiv({
+            element:ele2,
+            direction: 'x',
+            // callback:postHanlder
+        });
+    </script>
+</body>
+</html>
